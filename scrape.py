@@ -40,7 +40,7 @@ def clean_body(body_content):
     for script_or_style in soup(['script', 'style']):
         script_or_style.extract()
     
-    cleaned = soup.get_text(seperator='\n')
+    cleaned = soup.get_text(separator='\n')
     cleaned = "\n".join(line.strip() for line in cleaned.splitlines() if line.strip())
 
     return cleaned
